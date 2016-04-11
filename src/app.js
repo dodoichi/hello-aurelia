@@ -1,14 +1,11 @@
-export class Welcome {
-  heading = 'Welcome to Aurelia!';
-  firstName = 'Dodo';
-  lastName = 'Ichi';
+export class App {
+  configureRouter(config, router) {
+    config.title = 'Aurelia';
+    config.map([
+        { route: ['', 'welcome'], name: 'welcome', moduleId: './welcome', nav: true, title: 'Welcome' }
+    ]);
 
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-
-  submit() {
-    alert(`Welcome, ${this.fullName}!`);
+    this.route = router;
   }
 }
 
