@@ -11,7 +11,7 @@ export class Users {
     http.configure(config => {
       config
         .useStandardConfiguration()
-        .withBaseUrl('http://api.github.com');
+        .withBaseUrl('http://api.github.com/');
     });
 
     this.http = http;
